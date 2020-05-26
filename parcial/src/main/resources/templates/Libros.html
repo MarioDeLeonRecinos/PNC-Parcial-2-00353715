@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<title>Libros</title>
+</head>
+<body>
+	<div class="container m-6">
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Titulo</th>
+					<th scope="col">Autor</th>
+					<th scope="col">ISBN</th>
+					<th scope="col">Categoria</th>
+					<th scope="col">Fecha de ingreso</th>
+				</tr>
+			</thead>
+			<th:block th:each="libro,row:${libros}">
+				<tr>
+					<th scope="row" th:text="${libro.title}" />
+					<th scope="row" th:text="${libro.author}" />
+					<th scope="row" th:text="${libro.s_isbn}" />
+					<th scope="row"
+						th:text="${libro.c_categoria.s_categoria}" />
+					<th scope="row" th:text="${libro.fechaDelegate}" />
+				</tr>
+			</th:block>
+		</table>
+
+	</div>
+</body>
+</html>

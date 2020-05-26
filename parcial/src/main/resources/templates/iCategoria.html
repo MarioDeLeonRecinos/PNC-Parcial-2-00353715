@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<title>Insertar Categoria</title>
+</head>
+<body>
+	<div class="container">
+		<form class="m-2 p-2" th:action="@{/ingresarCategoriaValid}" method="post"
+			th:object="${categoria}">
+			<div class="form-group">
+				<label for="id1">Nombre Categor&iacute;a</label> <input type="text"
+					class="form-control" id="id1" placeholder="Sci-fi"
+					th:field="*{s_categoria}"><span
+					th:errors="*{s_categoria}" style="color: #ae3232;"></span><br>
+			</div>
+			<input class="btn btn-primary" type="submit" value="Guardar categor&iacute;a">
+		</form>
+	</div>
+</body>
+</html>

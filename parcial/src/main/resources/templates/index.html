@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<title>Opciones</title>
+</head>
+<body>
+	<div class="container">
+		<div class="container m-4 p-4 d-flex justify-content-center">
+			<button type="button" class="btn btn-primary mx-1"
+				onclick="window.location.href='/ingresarCategoria'">Ingresar
+				Categoria</button>
+			<button type="button" class="btn btn-primary mx-1"
+				onclick="window.location.href='/ingresarLibro'">Ingresar
+				Libro</button>
+			<button type="button" class="btn btn-primary mx-1"
+				onclick="window.location.href='/verLibros'">Ver Libros</button>
+		</div>
+		<div class="container m-4 p-4 d-flex justify-content-center">
+			<h1 th:if="${condition == 1}">Categor&iacute;a guardada con
+				&eacute;xito</h1>
+			<h1 th:if="${condition == 2}">Libro guardado con &eacute;xito</h1>
+		</div>
+	</div>
+</body>
+</html>
